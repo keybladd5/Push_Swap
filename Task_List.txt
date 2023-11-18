@@ -4,7 +4,7 @@ Task LIST
 	
 	-Swap (sa, sb, ss)✅
 	-Rotate (ra, rb, rr) ✅
-	-ReverseRotate (rra, rrb, rrr)
+	-ReverseRotate (rra, rrb, rrr) ✅
 	-Push (pa, pb)
 
 - Structure

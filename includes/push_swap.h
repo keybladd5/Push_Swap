@@ -29,7 +29,6 @@ t_node	*ft_lstnew_last(int content, t_node **head);
 t_node	*ft_lstlast(t_node *lst);
 
 //Functions to move the stacks
-void	swap(t_node **head);
 
 void	sa(t_node **a);
 
@@ -37,13 +36,17 @@ void	sb(t_node **b);
 
 void	ss(t_node **a, t_node **b);
 
-void	rotate(t_node **head);
-
 void	ra(t_node **a);
 
 void	rb(t_node **b);
 
 void	rr(t_node **a, t_node **b);
+
+void	rra(t_node **a);
+
+void	rrb(t_node **b);
+
+void	rrr(t_node **a, t_node **b);
 
 //Funtion to validate the arguments
 int 	ft_atol(char const *str);
