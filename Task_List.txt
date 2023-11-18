@@ -1,0 +1,17 @@
+Task LIST
+
+- Movements list:
+	
+	-Swap (sa, sb, ss)✅
+	-Rotate (ra, rb, rr) ✅
+	-ReverseRotate (rra, rrb, rrr)
+	-Push (pa, pb)
+
+- Structure
+
+	-Tail and Head
+
+-ARG
+	
+	-Pass the arguments to int with atol
+	-Functions to check the valid conditions on the argument

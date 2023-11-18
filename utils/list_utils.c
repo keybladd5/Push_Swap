@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
+
 //Crea un nodo
 t_node	*ft_lstnew_last(int content, t_node **head)
 {
@@ -37,19 +38,6 @@ t_node	*ft_lstnew_last(int content, t_node **head)
 	return (new_node);
 }
 
-// Funcion para medir el tamaño de la lista pasandole solo un nodo
-/*int	ft_lstsize(t_node *lst)
-{
-	int	i;
-
-	i = 0;
-	while (lst)
-	{
-		lst = lst->next;
-		i++;
-	}
-	return (i);
-}*/
 
 //Funcion para llegar al final de la lista
 t_node	*ft_lstlast(t_node *lst)
@@ -61,19 +49,3 @@ t_node	*ft_lstlast(t_node *lst)
 	}
 	return (lst);
 }
-
-/*t_node	*ft_lstfirst(t_node *lst)
-{
-	if (lst)
-	{
-		while (lst->prev)
-			lst = lst->prev;
-	}
-	return (lst);
-}*/
-//Funcion que pone un nodo  al principio e la lista
-/*void	ft_lstadd_front(t_node **lst, t_node *head)
-{
-	head->next = *lst;
-	*lst = head;
-}*/

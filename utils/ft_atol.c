@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
+#include "../includes/push_swap.h"
 
-int	ft_atoi(const char *str)
+//pasar ARG del string a integers
+int	ft_atol(const char *str)
 {
 	long	output;
 	long	sign;
@@ -35,14 +36,4 @@ int	ft_atoi(const char *str)
 	}
 	return (output * sign);
 }
-/*#include <unistd.h>
-#include <stdio.h>
-int main(int argc, char *argv[]) 
-{
-  if (argc == 1)
-    write(1, "\n", 1);
-  int result = ft_atoi(argv[1]);
 
-  printf("%d\n", result);
-  return (0);
-}*/

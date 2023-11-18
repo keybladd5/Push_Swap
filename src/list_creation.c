@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 //Funcion para iniciar la lista y 
 //asignar cada numero del array a un nuevo nodo

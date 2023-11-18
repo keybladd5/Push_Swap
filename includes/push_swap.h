@@ -16,25 +16,20 @@
 # include <stdlib.h>
 # include <stdio.h>
 
+//Struc definition
 typedef struct s_node {
 	int data;
 	struct s_node *next;
 	struct s_node *prev;
 }		t_node;
 
-int 	ft_atol(char const *str);
-
+//Functions to run the struc
 t_node	*ft_lstnew_last(int content, t_node **head);
-
-int		ft_lstsize(t_node *lst);
 
 t_node	*ft_lstlast(t_node *lst);
 
-t_node	*ft_lstfirst(t_node *lst);
-
-void	ft_lstadd_front(t_node **lst, t_node *head);
-
-void	ft_lstadd_back(t_node **lst, t_node *prev, t_node *new);
+//Funtion to validate the arguments
+int 	ft_atol(char const *str);
 
 
 #endif
