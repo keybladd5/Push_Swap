@@ -16,7 +16,7 @@ static void	reverse_rotate(t_node **head)
 {
 	t_node	*last_node;
 
-	last_node = lst_last(*head); //
+	last_node = ft_lstlast(*head); //
 	last_node->prev->next = NULL;//nodo anterior al ultimo su next apunta a null
 	(*head)->prev = last_node;//primer nodo, su prev pasa a apuntar al ultimo
 	last_node->next = *head; // ultimo nodo, su next pasa a apuntar al primero
@@ -27,18 +27,18 @@ static void	reverse_rotate(t_node **head)
 void	rra(t_node **a)
 {
 	reverse_rotate(a);
-	write(1, "rra\n", 3);
+	write(1, "rra\n", 4);
 }
 
 void	rrb(t_node **b)
 {
 	reverse_rotate(b);
-	write(1, "rrb\n", 3);
+	write(1, "rrb\n", 4);
 }
 
 void	rrr(t_node **a, t_node **b)
 {
 	reverse_rotate(a);
 	reverse_rotate(b);
-	write(1, "rrr\n", 3);
+	write(1, "rrr\n", 4);
 }

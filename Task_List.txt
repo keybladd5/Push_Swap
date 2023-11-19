@@ -5,7 +5,7 @@ Task LIST
 	-Swap (sa, sb, ss)✅
 	-Rotate (ra, rb, rr) ✅
 	-ReverseRotate (rra, rrb, rrr) ✅
-	-Push (pa, pb)
+	-Push (pa, pb) ✅
 
 - Structure
 
@@ -15,3 +15,19 @@ Task LIST
 	
 	-Pass the arguments to int with atol
 	-Functions to check the valid conditions on the argument
+
+
+
+
+0
+1
+2
+3
+4	3
+5	6
+
+
+
+
+
+

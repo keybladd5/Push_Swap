@@ -49,3 +49,13 @@ t_node	*ft_lstlast(t_node *lst)
 	}
 	return (lst);
 }
+
+t_node	*ft_lstfirs(t_node *lst)
+{
+	if (lst)
+	{
+		while (lst->prev)
+			lst = lst->prev;
+	}
+	return (lst);
+}

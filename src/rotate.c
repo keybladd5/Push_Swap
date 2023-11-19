@@ -16,7 +16,7 @@ static void	rotate(t_node **head)
 {
 	t_node	*last_node;
 
-	last_node = lst_last(*head);
+	last_node = ft_lstlast(*head);
 	*head = (*head)->next; // head=1
 	(*head)->prev->next = NULL; // 0 last
 	(*head)->prev->prev = last_node; // 0->prev=last
