@@ -17,17 +17,18 @@
 int		*init_arr(char **str)
 {
 	int	*arr;
+	int len;
 	int i;
 
+	len = 1;
 	i = 0;
-	while (str[i])
-		i++;
-	i--;
-	arr = (int *)malloc(sizeof(int) * (i));
-	while (i > 0)
+	while (str[len])
+		len++;
+	arr = (int *)malloc(sizeof(int) * (len));
+	while (i < (len - 1))
 	{
-		arr[i] = atol(str[i]);
-		i--;
+		arr[i] = ft_atol(str[i+1]);
+		i++;
 	}
 	return (arr);
 }
@@ -44,19 +45,3 @@ t_node	*init_list(int *arr, unsigned int len, t_node **head)
 	*head = ft_lstfirs(node);
 	return (*head);
 }
-
-/*int main()
-{
-    int arr[] = {1, 2, 3, 4, 5};
-    unsigned int len = 5;
-	t_node *head = NULL;
-    init_list(arr, len, &head);
-
-	while (head)
-	{
-		printf("%d\n", head->data);
-		head = head->next;
-	}
-
-    return 0;
-}*/

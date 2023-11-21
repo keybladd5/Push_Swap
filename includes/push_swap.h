@@ -32,7 +32,6 @@ t_node	*ft_lstlast(t_node *lst);
 t_node	*ft_lstfirs(t_node *lst);
 
 //Functions to move the stacks
-
 void	sa(t_node **a);
 
 void	sb(t_node **b);
@@ -55,12 +54,16 @@ void	pa(t_node **a, t_node **b);
 
 void	pb(t_node **a, t_node **b);
 
-//Funtion to validate the arguments
+//Functions to validate the arguments
+char	*ft_strchr(const char *s, int c);
 
-int 	ft_atol(char const *str);
+long 	ft_atol(char const *str);
 
 int		*init_arr(char **str);
 
 t_node	*init_list(int *arr, unsigned int len, t_node **head);
+
+//Funtions to free 
+void	ft_free_list(t_node **head);
 
 #endif

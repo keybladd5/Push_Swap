@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                       :+:      :+:    :+:   */
+/*   ft_atol.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polmarti <polmarti@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,7 +13,20 @@
 #include "../includes/push_swap.h"
 
 //pasar ARG del string a integers
-int	ft_atol(const char *str)
+
+//support function for atol
+char	*ft_strchr(const char *s, int c)
+{
+	if (!s)
+		return (NULL);
+	while (*(char *)s && *(char *)s != (char)c)
+		s++;
+	if (*(char *)s != (char)c)
+		return (0);
+	return ((char *)s);
+}
+//convert str to long int
+long	ft_atol(const char *str)
 {
 	long	output;
 	long	sign;
@@ -29,11 +42,10 @@ int	ft_atol(const char *str)
 		str++;
 		sign = -1;
 	}
-	while (*str && (ft_strchr("0123456789", *str)) != NULL)
+	while (*str && (ft_strchr("0123456789", *str) != NULL))
 	{
 		output = (output * 10) + (*str - '0');
 		str++;
 	}
 	return (output * sign);
 }
-

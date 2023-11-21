@@ -14,6 +14,8 @@
 
 static void	swap(t_node **head) // 0 1 2 -> 1 0 2 
 {
+	if (!*head)
+		return ;
 	*head = (*head)->next; // head=1
 	(*head)->prev->next = (*head)->next; // 0->next=2
 	(*head)->prev->prev = *head; // 0->prev=1

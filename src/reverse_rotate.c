@@ -16,6 +16,8 @@ static void	reverse_rotate(t_node **head)
 {
 	t_node	*last_node;
 
+	if (!*head)
+		return ;
 	last_node = ft_lstlast(*head); //
 	last_node->prev->next = NULL;//nodo anterior al ultimo su next apunta a null
 	(*head)->prev = last_node;//primer nodo, su prev pasa a apuntar al ultimo

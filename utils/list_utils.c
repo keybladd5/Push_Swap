@@ -50,6 +50,7 @@ t_node	*ft_lstlast(t_node *lst)
 	return (lst);
 }
 
+//Funcion para llegar al principio de la lista
 t_node	*ft_lstfirs(t_node *lst)
 {
 	if (lst)
@@ -58,4 +59,18 @@ t_node	*ft_lstfirs(t_node *lst)
 			lst = lst->prev;
 	}
 	return (lst);
+}
+
+void	ft_free_list(t_node **head)
+{
+	t_node	*to_iter;
+
+	if (!*head)
+		return ;
+	while (to_iter)
+	{
+		*head = (*head)->next;
+		free(to_iter);
+		to_iter = *head;
+	}
 }

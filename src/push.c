@@ -12,30 +12,39 @@
 
 #include "../includes/push_swap.h"
 
+
+static void	push(t_node **src, t_node **dst)
+{
+
+	t_node *node_topush;
+
+	if (!*src)
+    	return ;
+	node_topush = *src;
+    *src = (*src)->next;
+	if (*src)
+		(*src)->prev = NULL;
+    if (*dst)
+	{	
+        node_topush->next = *dst;
+		(*dst)->prev = node_topush;
+		*dst = node_topush; 
+	}
+	else
+	{
+		*dst = node_topush;
+		(*dst)->next = NULL;
+	}
+}
+
 void	pa(t_node **a, t_node **b)
 {
-	if (!*b)
-        return ;
-    *a = (*a)->next;
-    (*a)->prev->prev = (*b)->next->prev;
-    *b = (*b)->next; 
-    (*b)->prev->next = (*a)->prev;
-    (*b)->prev = NULL;
-    *a = (*a)->prev->prev;
-
+	push(b, a);
 	write(1, "pa\n", 3);
 }
 
 void	pb(t_node **a, t_node **b)
 {
-	if (!*a)
-        return ;
-    *b = (*b)->next;
-    (*b)->prev->prev = (*a)->next->prev;
-    *a = (*a)->next; 
-    (*a)->prev->next = (*b)->prev;
-    (*a)->prev = NULL;
-    *b = (*b)->prev->prev;
-
+	push(a, b);
 	write(1, "pb\n", 3);
 }

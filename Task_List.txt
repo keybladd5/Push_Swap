@@ -9,25 +9,19 @@ Task LIST
 
 - Structure
 
-	-Tail and Head
+	-Tail and Head ✅
 
 -ARG
 	
-	-Pass the arguments to int with atol
-	-Functions to check the valid conditions on the argument
+	-Pass the arguments to int with atol ✅
+	-Check the conversion in the function that allow all numbers on nodes
+	-Functions to check the valid conditions on the argument 
+		+ Pending chars ("abc"), MAX_INT, MIN_INT, and repeat ints.
+	-free the array ❌
+	-free nodes when program ends ❌
 
-
-
-
-0
-1
-2
-3
-4	3
-5	6
-
-
-
-
-
-
+-Protections
+	-protect mallocs if something fail ❌
+	-protect writes? ❌
+	
+-Makefile
