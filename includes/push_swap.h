@@ -19,17 +19,21 @@
 
 //Struc definition
 typedef struct s_node {
-	int data;
-	struct s_node *next;
-	struct s_node *prev;
+	int				data;
+	struct s_node	*next;
+	struct s_node	*prev;
 }		t_node;
 
 //Functions to run the struc
+int		*init_arr(char **str);
+
 t_node	*ft_lstnew_last(int content, t_node **head);
 
 t_node	*ft_lstlast(t_node *lst);
 
 t_node	*ft_lstfirs(t_node *lst);
+
+t_node	*init_list(int *arr, unsigned int len, t_node **head);
 
 //Functions to move the stacks
 void	sa(t_node **a);
@@ -57,13 +61,15 @@ void	pb(t_node **a, t_node **b);
 //Functions to validate the arguments
 char	*ft_strchr(const char *s, int c);
 
-long 	ft_atol(char const *str);
+long	ft_atol(char const *str);
 
-int		*init_arr(char **str);
+int		ft_check_isnbr(int argc, char **argv);
 
-t_node	*init_list(int *arr, unsigned int len, t_node **head);
+int		ft_check_isrepeated(int *arr, int len);
 
 //Funtions to free 
 void	ft_free_list(t_node **head);
+
+void	ft_free_all_list(t_node **a, t_node **b);
 
 #endif

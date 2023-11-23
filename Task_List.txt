@@ -16,12 +16,13 @@ Task LIST
 	-Pass the arguments to int with atol ✅
 	-Check the conversion in the function that allow all numbers on nodes
 	-Functions to check the valid conditions on the argument 
-		+ Pending chars ("abc"), MAX_INT, MIN_INT, and repeat ints.
-	-free the array ❌
-	-free nodes when program ends ❌
+		+ Pending chars ("abc"), MAX_INT, MIN_INT, and repeat ints.❌
+	-free the array ✅
+	-free nodes when program ends ✅
 
 -Protections
 	-protect mallocs if something fail ❌
 	-protect writes? ❌
+-Turkis Algorithm ❌
 	
--Makefile
+-Makefile ❌

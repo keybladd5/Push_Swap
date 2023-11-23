@@ -12,8 +12,6 @@
 
 #include "../includes/push_swap.h"
 
-//pasar ARG del string a integers
-
 //support function for atol
 char	*ft_strchr(const char *s, int c)
 {

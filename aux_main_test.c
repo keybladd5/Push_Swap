@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   aux_main_test.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polmarti <polmarti@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 11:53:04 by polmarti          #+#    #+#             */
-/*   Updated: 2023/11/16 11:53:09 by polmarti         ###   ########.fr       */
+/*   Created: 2023/11/23 13:00:08 by polmarti          #+#    #+#             */
+/*   Updated: 2023/11/23 13:00:10 by polmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
 
-/*int	main(int argc, char **argv)
-{
-	if (argc == 1 || ) 
-	{
-		write(2, "Error\n", 6);
-		return (0);
-	}
-	if
-}*/
-
-// test print list
-#include <stdio.h>
-void	print_stack(t_node **head)
+// FUNCTION TO TEST THE PROGRAM
+void	print_stack(t_node **head, char c)
 {
 	t_node	*current = *head;
-
+	printf("Stack %c: ", c);
 	while (current)
 	{
 		printf("%d ", current->data);
@@ -36,8 +25,76 @@ void	print_stack(t_node **head)
 	printf("\n");
 }
 
+// FUNCTION TO TEST THE PROGRAM
+void	support_main_movements(t_node *stack_a, t_node *stack_b)
+{
+	print_stack(&stack_a, 'a');
+	print_stack(&stack_b, 'b');
 
-int	main()
+	/*sa(&stack_a);
+	print_stack(&stack_a, 'a');
+	print_stack(&stack_b, 'b');*/
+
+	while (stack_a)
+	{
+		pb(&stack_a, &stack_b);
+		print_stack(&stack_a, 'a');
+		print_stack(&stack_b, 'b');
+	}
+
+	sa(&stack_a);
+	print_stack(&stack_a, 'a');
+	print_stack(&stack_b, 'b');
+
+	sb(&stack_b);
+	print_stack(&stack_a, 'a');
+	print_stack(&stack_b, 'b');
+
+	ss(&stack_a, &stack_b);
+	print_stack(&stack_a, 'a');
+	print_stack(&stack_b, 'b');
+
+	while (stack_b)
+	{
+		pb(&stack_b, &stack_a);
+		print_stack(&stack_a, 'a');
+		print_stack(&stack_b, 'b');
+	}
+
+	ra(&stack_a);
+	print_stack(&stack_a, 'a');
+	print_stack(&stack_b, 'b');
+
+	rb(&stack_b);
+	print_stack(&stack_a, 'a');
+	print_stack(&stack_b, 'b');
+
+	rr(&stack_a, &stack_b);
+	print_stack(&stack_a, 'a');
+	print_stack(&stack_b, 'b');
+
+	while (stack_a)
+	{
+		pb(&stack_a, &stack_b);
+		print_stack(&stack_a, 'a');
+		print_stack(&stack_b, 'b');
+	}
+
+	rra(&stack_a);
+	print_stack(&stack_a, 'a');
+	print_stack(&stack_b, 'b');
+
+	rrb(&stack_b);
+	print_stack(&stack_a, 'a');
+	print_stack(&stack_b, 'b');
+
+	rrr(&stack_a, &stack_b);
+	print_stack(&stack_a, 'a');
+	print_stack(&stack_b, 'b');
+}
+
+//Another main to test whitout command lines
+/*int	main()
 {
 	t_node    *a;
     a = malloc(sizeof(t_node));
@@ -117,4 +174,4 @@ int	main()
 	print_stack(&b);
 
 	return (0);
-}
+}*/

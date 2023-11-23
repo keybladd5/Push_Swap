@@ -67,10 +67,17 @@ void	ft_free_list(t_node **head)
 
 	if (!*head)
 		return ;
+	to_iter = *head;
 	while (to_iter)
 	{
 		*head = (*head)->next;
 		free(to_iter);
 		to_iter = *head;
 	}
+}
+
+void	ft_free_all_list(t_node **a, t_node **b)
+{
+	ft_free_list(a);
+	ft_free_list(b);
 }
