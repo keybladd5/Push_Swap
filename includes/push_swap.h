@@ -16,10 +16,13 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <stdbool.h>
 
 //Struc definition
 typedef struct s_node {
 	int				data;
+	int				index;
+	bool			upper_half;
 	struct s_node	*next;
 	struct s_node	*prev;
 }		t_node;
@@ -34,6 +37,8 @@ t_node	*ft_lstlast(t_node *lst);
 t_node	*ft_lstfirs(t_node *lst);
 
 t_node	*init_list(int *arr, unsigned int len, t_node **head);
+
+int	ft_lstsize(t_node *lst);
 
 //Functions to move the stacks
 void	sa(t_node **a);
@@ -70,6 +75,12 @@ int		ft_check_isrepeated(int *arr, int len);
 //Funtions to free 
 void	ft_free_list(t_node **head);
 
-void	ft_free_all_list(t_node **a, t_node **b);
+//Functions to sort
+
+int	check_is_sorted(t_node **stack_a);
+
+
+
+void	support_main_movements(t_node *stack_a, t_node *stack_b);
 
 #endif

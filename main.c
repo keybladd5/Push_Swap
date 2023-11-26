@@ -32,7 +32,9 @@ int	main(int argc, char **argv)
 	if (!stack_a)
 		return (free(arr), 0);
 	free(arr);
+
 	//here calls to algoritm
 	support_main_movements(stack_a, stack_b);//this ONLY 4 test
-	ft_free_all_list(&stack_a, &stack_b);
+	ft_free_list(&stack_a);
+	return (0);
 }

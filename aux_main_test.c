@@ -25,17 +25,31 @@ void	print_stack(t_node **head, char c)
 	printf("\n");
 }
 
+void	print_stack_nd_index(t_node **head, char c)
+{
+	t_node	*current = *head;
+	printf("Stack %c: ", c);
+	while (current)
+	{
+		printf("Index: %d ", current->target);
+		printf("Num: %d ", current->data);
+		current = current->next;
+	}
+	printf("\n");
+}
+
 // FUNCTION TO TEST THE PROGRAM
 void	support_main_movements(t_node *stack_a, t_node *stack_b)
 {
+	/*print_stack_nd_index(&stack_a, 'a');
+	print_stack_nd_index(&stack_b, 'b');*/
+
+	//printf("%d\n", check_is_sorted(&stack_a));
+	//sa(&stack_a);
 	print_stack(&stack_a, 'a');
 	print_stack(&stack_b, 'b');
 
-	/*sa(&stack_a);
-	print_stack(&stack_a, 'a');
-	print_stack(&stack_b, 'b');*/
-
-	while (stack_a)
+	/*while (stack_a)
 	{
 		pb(&stack_a, &stack_b);
 		print_stack(&stack_a, 'a');
@@ -90,7 +104,8 @@ void	support_main_movements(t_node *stack_a, t_node *stack_b)
 
 	rrr(&stack_a, &stack_b);
 	print_stack(&stack_a, 'a');
-	print_stack(&stack_b, 'b');
+	print_stack(&stack_b, 'b');*/
+
 }
 
 //Another main to test whitout command lines

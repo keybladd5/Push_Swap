@@ -19,6 +19,7 @@ Task LIST
 		+ Pending chars ("abc"), MAX_INT, MIN_INT, and repeat ints.❌
 	-free the array ✅
 	-free nodes when program ends ✅
+	-argument "2+3" or "2------" is valid?
 
 -Protections
 	-protect mallocs if something fail ❌

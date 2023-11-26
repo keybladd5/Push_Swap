@@ -75,9 +75,18 @@ void	ft_free_list(t_node **head)
 		to_iter = *head;
 	}
 }
-
-void	ft_free_all_list(t_node **a, t_node **b)
+int	ft_lstsize(t_node *lst)
 {
-	ft_free_list(a);
-	ft_free_list(b);
+	int i;
+
+	i = 0;
+	if (lst)
+	{
+		while (lst->next)
+		{
+			lst = lst->next;
+			i++;
+		}
+	}
+	return (i);
 }

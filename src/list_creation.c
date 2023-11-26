@@ -14,7 +14,7 @@
 
 //Funcion para iniciar la lista y 
 //asignar cada numero del array a un nuevo nodo
-int		*init_arr(char **str)
+int		*init_arr(char **argv)
 {
 	int	*arr;
 	int len;
@@ -22,12 +22,14 @@ int		*init_arr(char **str)
 
 	len = 1;
 	i = 0;
-	while (str[len])
+	while (argv[len])
 		len++;
 	arr = (int *)malloc(sizeof(int) * (len));
+	if (!arr)
+		return (0);
 	while (i < (len - 1))
 	{
-		arr[i] = ft_atol(str[i+1]);
+		arr[i] = ft_atol(argv[i+1]);
 		i++;
 	}
 	return (arr);
@@ -42,6 +44,5 @@ t_node	*init_list(int *arr, unsigned int len, t_node **head)
 		node = ft_lstnew_last(*arr, head);
 		arr++;
 	}
-	*head = ft_lstfirs(node);
 	return (*head);
 }
