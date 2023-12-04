@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   rotate.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polmarti <polmarti@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 12:01:11 by polmarti          #+#    #+#             */
-/*   Updated: 2023/11/18 12:01:13 by polmarti         ###   ########.fr       */
+/*   Created: 2023/11/17 20:41:31 by polmarti          #+#    #+#             */
+/*   Updated: 2023/12/02 19:26:41 by polmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../inc/push_swap.h"
 
-static void	rotate(t_node **head)
+static	void	rotate(t_node **head)
 {
 	t_node	*last_node;
 
-	if (!*head)
-		return ;
 	last_node = ft_lstlast(*head);
-	*head = (*head)->next; // head=1
-	(*head)->prev->next = NULL; // 0 last
-	(*head)->prev->prev = last_node; // 0->prev=last
-	last_node->next = (*head)->prev; // last->next=0
-	(*head)->prev = NULL; // 1 first
+	*head = (*head)->next;
+	(*head)->prev->next = NULL;
+	(*head)->prev->prev = last_node;
+	last_node->next = (*head)->prev;
+	(*head)->prev = NULL;
 }
 
 void	ra(t_node **a)
