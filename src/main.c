@@ -22,6 +22,8 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (0);
 	stack_a = init_stack(&stack_a, argv);
+	if (!stack_a)
+		return (0);
 	if (!ft_lstsorted(stack_a))
 	{
 		if (ft_lstsize(stack_a) == 2)
